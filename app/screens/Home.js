@@ -1,7 +1,8 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { ImageBackground, StyleSheet, View,Image } from 'react-native';
 import Button from "../components/Button";
-function Home(props) {
+const Home = ({navigation})=> {
     return (
        <ImageBackground
        blurRadius={10}
@@ -16,11 +17,18 @@ function Home(props) {
             <Button
             title={"Recognize"}
             style={styles.RecognizeButton}
+            onPress={()=>{
+                navigation.navigate('Recognition', {name: 'Recognize'})
+            }}
             />
             <Button
             title="Generate"
             color="secondary"
-             style={styles.GenerateButton}/>
+             style={styles.GenerateButton}
+             onPress={()=>{
+                navigation.navigate('MusicPlayer', {name: 'MusicPlayer'})
+            }}
+             />
 
             </View>
         </ImageBackground>
