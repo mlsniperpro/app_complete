@@ -1,19 +1,16 @@
-import { View, Text, StyleSheet, SafeAreaView, Dimensions, TouchableOpacity, Image, FlatList, Animated } from 'react-native'
+import { View,
+     Text,
+      StyleSheet, 
+      SafeAreaView,
+       Dimensions, 
+       TouchableOpacity,
+        Image,
+         Animated } from 'react-native'
 import React, {useEffect, useRef, useState} from 'react'
 import Iconicons from 'react-native-vector-icons/Ionicons';
 import Slider from '@react-native-community/slider';
 import songs from '../model/data';
-/*
-import TrackPlayer, {
-    Capability,
-    Event,
-    RepeatMode,
-    State,
-    usePlaybackState,
-    useProgress,
-    useTrackPlayerEvents
-}from 'react-native-track-player';
-*/
+
 const {width, height} = Dimensions.get('window');
 const MusicPlayer = ()=> {
     const scrollx = useRef(new Animated.Value(0)).current;
